@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #F7F6F3; }
+  * { box-sizing: border-box; }
+  a { color: #0B0B0B; text-decoration: none; }
+  a:hover { color: #6B6A66; }
+  ::selection { background: #0B0B0B; color: #F7F6F3; }
+</style>
+</helmet>
+<div style="background:#F7F6F3;color:#0B0B0B;font-family:Archivo,Helvetica,Arial,sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased">
+
+  <header style="display:flex;align-items:center;justify-content:space-between;gap:32px;padding:26px 48px;border-bottom:1px solid #DCDAD4;position:sticky;top:0;background:#F7F6F3;z-index:10">
+    <a href="index.html" style="display:flex;align-items:center"><img src="assets/mt-logo.png" alt="MT Technologies" style="height:46px;width:auto;display:block"></a>
+    <nav style="display:flex;gap:34px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase">
+      <a href="Philosophy.html">Philosophy</a>
+      <a href="Theses.html" style="border-bottom:1px solid #0B0B0B;padding-bottom:2px">Theses</a>
+      <a href="Performance.html">Performance</a>
+      <a href="Founders.html">Founders</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section style="padding:80px 48px 56px;border-bottom:1px solid #DCDAD4;max-width:900px">
+    <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#6B6A66;margin:0 0 32px"><a href="Theses.html">&larr; All theses</a></p>
+    <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#6B6A66;margin:0 0 28px">Report 04 · Space infrastructure · Core position</p>
+    <h1 style="font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(34px,4.6vw,64px);line-height:1.08;letter-spacing:-0.02em;margin:0;text-wrap:pretty">Direct-to-device satellite operator</h1>
+    <p style="font-size:19px;line-height:1.6;color:#3A3936;margin:32px 0 0;max-width:60ch;text-wrap:pretty">Report template. Replace this standfirst with two or three sentences stating the thesis plainly: what the company does, what the market believes, and where we differ.</p>
+  </section>
+
+  <section style="border-bottom:1px solid #DCDAD4;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))">
+    <div style="padding:36px 48px;border-right:1px solid #DCDAD4">
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6B6A66;margin:0 0 12px">Position size</p>
+      <p style="font-family:Newsreader,Georgia,serif;font-size:32px;font-weight:300;margin:0;line-height:1">&mdash;</p>
+    </div>
+    <div style="padding:36px 48px;border-right:1px solid #DCDAD4">
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6B6A66;margin:0 0 12px">Entry date</p>
+      <p style="font-family:Newsreader,Georgia,serif;font-size:32px;font-weight:300;margin:0;line-height:1">&mdash;</p>
+    </div>
+    <div style="padding:36px 48px;border-right:1px solid #DCDAD4">
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6B6A66;margin:0 0 12px">Horizon</p>
+      <p style="font-family:Newsreader,Georgia,serif;font-size:32px;font-weight:300;margin:0;line-height:1">&mdash;</p>
+    </div>
+    <div style="padding:36px 48px">
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6B6A66;margin:0 0 12px">Sleeve</p>
+      <p style="font-family:Newsreader,Georgia,serif;font-size:32px;font-weight:300;margin:0;line-height:1">Core</p>
+    </div>
+  </section>
+
+  <article style="padding:80px 48px;display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:64px;align-items:start;border-bottom:1px solid #DCDAD4">
+    <nav style="position:sticky;top:120px;display:grid;gap:14px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#6B6A66">
+      <a href="#business">01 The business</a>
+      <a href="#mispricing">02 Why it is mispriced</a>
+      <a href="#catalysts">03 Catalysts</a>
+      <a href="#valuation">04 Valuation</a>
+      <a href="#risks">05 Risks</a>
+      <a href="#invalidate">06 What would change our mind</a>
+    </nav>
+    <div style="max-width:68ch;display:grid;gap:56px">
+      <div id="business">
+        <h2 style="font-family:Newsreader,Georgia,serif;font-weight:400;font-size:32px;margin:0 0 20px">01 &mdash; The business</h2>
+        <p style="font-size:17px;line-height:1.7;color:#3A3936;margin:0 0 18px">Describe what the company sells, to whom, and how it earns money. Keep it to a paragraph a reader outside the sector can follow.</p>
+        <p style="font-size:17px;line-height:1.7;color:#3A3936;margin:0">Then set out the competitive position: proprietary technology or intellectual property, partnerships with established industry participants, and the barriers that protect the position.</p>
+      </div>
+      <div id="mispricing">
+        <h2 style="font-family:Newsreader,Georgia,serif;font-weight:400;font-size:32px;margin:0 0 20px">02 &mdash; Why it is mispriced</h2>
+        <p style="font-size:17px;line-height:1.7;color:#3A3936;margin:0">State the consensus view and the specific reason it is wrong: a capital-intensive development phase that suppresses near-term earnings, a misread of contract economics, or coverage too thin to price the asset properly.</p>
+      </div>
+      <div id="catalysts">
+        <h2 style="font-family:Newsreader,Georgia,serif;font-weight:400;font-size:32px;margin:0 0 24px">03 &mdash; Catalysts</h2>
+        <div style="border-top:1px solid #DCDAD4">
+          <div style="display:grid;grid-template-columns:130px minmax(0,1fr);gap:24px;padding:18px 0;border-bottom:1px solid #DCDAD4"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B6A66">Near term</span><span style="font-size:16px;line-height:1.6;color:#3A3936">Regulatory approval, contract award, or commercial milestone</span></div>
+          <div style="display:grid;grid-template-columns:130px minmax(0,1fr);gap:24px;padding:18px 0;border-bottom:1px solid #DCDAD4"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B6A66">Medium term</span><span style="font-size:16px;line-height:1.6;color:#3A3936">Capacity ramp, first revenue at scale, or partner expansion</span></div>
+          <div style="display:grid;grid-template-columns:130px minmax(0,1fr);gap:24px;padding:18px 0;border-bottom:1px solid #DCDAD4"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6B6A66">Long term</span><span style="font-size:16px;line-height:1.6;color:#3A3936">Structural share gain as the sector transformation plays out</span></div>
+        </div>
+      </div>
+      <div id="valuation">
+        <h2 style="font-family:Newsreader,Georgia,serif;font-weight:400;font-size:32px;margin:0 0 20px">04 &mdash; Valuation</h2>
+        <p style="font-size:17px;line-height:1.7;color:#3A3936;margin:0">Show the arithmetic, not a conclusion: the assumptions, the range of outcomes, and what has to be true for the downside case to hold.</p>
+      </div>
+      <div id="risks">
+        <h2 style="font-family:Newsreader,Georgia,serif;font-weight:400;font-size:32px;margin:0 0 20px">05 &mdash; Risks</h2>
+        <p style="font-size:17px;line-height:1.7;color:#3A3936;margin:0">Dilution, execution slippage, customer concentration, regulatory delay, and the balance sheet&rsquo;s ability to sustain operations through the pre-profitability phase.</p>
+      </div>
+      <div id="invalidate">
+        <h2 style="font-family:Newsreader,Georgia,serif;font-weight:400;font-size:32px;margin:0 0 20px">06 &mdash; What would change our mind</h2>
+        <p style="font-size:17px;line-height:1.7;color:#3A3936;margin:0">Name the evidence that would end the position: a missed milestone, a failed readout, a financing on punitive terms, or the loss of the advantage the thesis rests on.</p>
+      </div>
+    </div>
+  </article>
+
+  <section style="padding:56px 48px">
+    <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;line-height:1.8;letter-spacing:0.06em;color:#6B6A66;margin:0;max-width:84ch">This report is published for information only. It is not investment advice, a recommendation to buy or sell any security, or an invitation to invest, and its authors are not registered or licensed advisers. Positions may change without notice. Past performance is not indicative of future results.</p>
+  </section>
+
+  <footer style="border-top:1px solid #DCDAD4;padding:36px 48px;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#6B6A66">
+    <span>MT Technologies · BC General Partnership</span>
+    <span>Not investment advice · Not an offer</span>
+  </footer>
+</div>
+</x-dc>
+</body>
+</html>

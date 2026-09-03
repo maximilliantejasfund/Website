@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #F7F6F3; }
+  * { box-sizing: border-box; }
+  a { color: #0B0B0B; text-decoration: none; }
+  a:hover { color: #6B6A66; }
+  ::selection { background: #0B0B0B; color: #F7F6F3; }
+  input, textarea { font-family: Archivo, Helvetica, Arial, sans-serif; }
+</style>
+</helmet>
+<div style="background:#F7F6F3;color:#0B0B0B;font-family:Archivo,Helvetica,Arial,sans-serif;min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased">
+
+  <header style="display:flex;align-items:center;justify-content:space-between;gap:32px;padding:26px 48px;border-bottom:1px solid #DCDAD4;background:#F7F6F3">
+    <a href="index.html" style="display:flex;align-items:center"><img src="assets/mt-logo.png" alt="MT Technologies" style="height:46px;width:auto;display:block"></a>
+    <nav style="display:flex;gap:34px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase">
+      <a href="Philosophy.html">Philosophy</a>
+      <a href="Theses.html">Theses</a>
+      <a href="Performance.html">Performance</a>
+      <a href="Founders.html">Founders</a>
+      <a href="Contact.html" style="border-bottom:1px solid #0B0B0B;padding-bottom:2px">Contact</a>
+    </nav>
+  </header>
+
+  <section style="flex:1;padding:96px 48px 88px;display:grid;gap:56px;max-width:760px">
+    <div>
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#6B6A66;margin:0 0 32px">Contact</p>
+      <h1 style="font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(38px,5.4vw,76px);line-height:1.04;letter-spacing:-0.02em;margin:0">Send us a message.</h1>
+    </div>
+
+    <form onSubmit="{{ onSubmit }}" style="display:grid;gap:28px">
+      <label style="display:grid;gap:10px">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6B6A66">Name</span>
+        <input type="text" required="required" style="border:0;border-bottom:1px solid #0B0B0B;background:transparent;padding:10px 0;font-size:17px;color:#0B0B0B;outline:none" style-focus="border-bottom:1px solid #6B6A66">
+      </label>
+      <label style="display:grid;gap:10px">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6B6A66">Email</span>
+        <input type="email" required="required" style="border:0;border-bottom:1px solid #0B0B0B;background:transparent;padding:10px 0;font-size:17px;color:#0B0B0B;outline:none" style-focus="border-bottom:1px solid #6B6A66">
+      </label>
+      <label style="display:grid;gap:10px">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6B6A66">Message</span>
+        <textarea rows="7" style="border:1px solid #DCDAD4;background:transparent;padding:16px;font-size:16px;line-height:1.6;color:#0B0B0B;outline:none;resize:vertical" style-focus="border:1px solid #0B0B0B"></textarea>
+      </label>
+      <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+        <button type="submit" style="padding:15px 30px;background:#0B0B0B;color:#F7F6F3;border:0;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer" style-hover="background:#3A3936">Send message</button>
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:#6B6A66">Received.</span>
+        </sc-if>
+      </div>
+    </form>
+
+    <p style="font-size:16px;margin:0;color:#3A3936">Or write to <a href="mailto:partners@mttechnologies.fund" style="border-bottom:1px solid #DCDAD4">partners@mttechnologies.fund</a></p>
+    <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;line-height:1.8;letter-spacing:0.06em;color:#6B6A66;margin:0;max-width:80ch">MT Technologies is a BC general partnership and is not raising capital or offering investment services. The Fund Managers hold no professional credentials and are not registered or licensed advisers; nothing sent or received here is investment advice.</p>
+  </section>
+
+  <footer style="border-top:1px solid #DCDAD4;padding:36px 48px;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#6B6A66">
+    <span>MT Technologies · BC General Partnership</span>
+    <span>Not investment advice · Not an offer</span>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sent: false };
+  renderVals() {
+    return {
+      sent: this.state.sent,
+      onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #F7F6F3; }
+  * { box-sizing: border-box; }
+  a { color: #0B0B0B; text-decoration: none; }
+  a:hover { color: #6B6A66; }
+  ::selection { background: #0B0B0B; color: #F7F6F3; }
+</style>
+</helmet>
+<div style="background:#F7F6F3;color:#0B0B0B;font-family:Archivo,Helvetica,Arial,sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased">
+
+  <header style="display:flex;align-items:center;justify-content:space-between;gap:32px;padding:26px 48px;border-bottom:1px solid #DCDAD4;position:sticky;top:0;background:#F7F6F3;z-index:10">
+    <a href="index.html" style="display:flex;align-items:center"><img src="assets/mt-logo.png" alt="MT Technologies" style="height:46px;width:auto;display:block"></a>
+    <nav style="display:flex;gap:34px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase">
+      <a href="Philosophy.html">Philosophy</a>
+      <a href="Theses.html">Theses</a>
+      <a href="Performance.html">Performance</a>
+      <a href="Founders.html">Founders</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section style="padding:120px 48px 96px;max-width:1180px">
+    <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#6B6A66;margin:0 0 40px">Est. 2024 · Private investment partnership</p>
+    <h1 style="font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(44px,6.4vw,104px);line-height:1.02;letter-spacing:-0.02em;margin:0;max-width:20ch;text-wrap:pretty">Asymmetric bets in sectors at an inflection point.</h1>
+    <p style="font-size:19px;line-height:1.6;color:#3A3936;margin:40px 0 0;max-width:56ch;text-wrap:pretty">MT Technologies is an informal investment fund created by Tejas Vijay and Maximillian Cauldwell. The Fund employs a dual-strategy approach, allocating approximately 65% of capital to long-term core positions and 35% to short-term tactical trading.</p>
+    <div style="display:flex;gap:14px;margin-top:48px;flex-wrap:wrap">
+      <a href="Performance.html" style="display:inline-block;padding:15px 28px;background:#0B0B0B;color:#F7F6F3;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase" style-hover="background:#3A3936;color:#F7F6F3">View track record</a>
+      <a href="Philosophy.html" style="display:inline-block;padding:15px 28px;border:1px solid #0B0B0B;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase" style-hover="background:#0B0B0B;color:#F7F6F3">Read the philosophy</a>
+    </div>
+  </section>
+
+  <sc-if value="{{ showAtAGlance }}" hint-placeholder-val="{{ true }}">
+  <section style="border-top:1px solid #DCDAD4;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+    <div style="padding:44px 48px;border-right:1px solid #DCDAD4">
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6B6A66;margin:0 0 16px">Core positions</p>
+      <p style="font-family:Newsreader,Georgia,serif;font-size:44px;font-weight:300;margin:0;line-height:1">~65%</p>
+    </div>
+    <div style="padding:44px 48px;border-right:1px solid #DCDAD4">
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6B6A66;margin:0 0 16px">Tactical trading</p>
+      <p style="font-family:Newsreader,Georgia,serif;font-size:44px;font-weight:300;margin:0;line-height:1">~35%</p>
+    </div>
+    <div style="padding:44px 48px">
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#6B6A66;margin:0 0 16px">Market focus</p>
+      <p style="font-family:Newsreader,Georgia,serif;font-size:44px;font-weight:300;margin:0;line-height:1">Small &amp; mid cap</p>
+    </div>
+  </section>
+  </sc-if>
+
+  <section style="border-top:1px solid #DCDAD4;padding:96px 48px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:80px;align-items:start">
+    <h2 style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#6B6A66;margin:0">How we invest</h2>
+    <div>
+      <p style="font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(26px,2.9vw,40px);line-height:1.24;margin:0;max-width:36ch;text-wrap:pretty">Companies with capped or quantifiable downside and disproportionate upside, driven by structural industry tailwinds.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:44px;margin-top:56px">
+        <div>
+          <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;color:#6B6A66;margin:0 0 12px">01</p>
+          <h3 style="font-size:16px;font-weight:600;margin:0 0 10px">Core portfolio · ~65%</h3>
+          <p style="font-size:15px;line-height:1.6;color:#3A3936;margin:0">Small- and mid-cap securities in emerging, high-growth sectors, held through the realization of their thesis.</p>
+        </div>
+        <div>
+          <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;color:#6B6A66;margin:0 0 12px">02</p>
+          <h3 style="font-size:16px;font-weight:600;margin:0 0 10px">Tactical sleeve · ~35%</h3>
+          <p style="font-size:15px;line-height:1.6;color:#3A3936;margin:0">Short-duration trades in volatile small caps, using technical analysis, momentum, and volume-pattern recognition.</p>
+        </div>
+        <div>
+          <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;color:#6B6A66;margin:0 0 12px">03</p>
+          <h3 style="font-size:16px;font-weight:600;margin:0 0 10px">Research-intensive</h3>
+          <p style="font-size:15px;line-height:1.6;color:#3A3936;margin:0">Due diligence on industry dynamics, competitive positioning, fundamentals, management quality, and catalyst timelines.</p>
+        </div>
+      </div>
+      <p style="margin:44px 0 0"><a href="Philosophy.html" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;border-bottom:1px solid #0B0B0B;padding-bottom:3px">Full strategy &rarr;</a></p>
+    </div>
+  </section>
+
+  <sc-if value="{{ showFoundersTeaser }}" hint-placeholder-val="{{ true }}">
+  <section style="border-top:1px solid #DCDAD4;padding:96px 48px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:80px;align-items:start">
+    <h2 style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#6B6A66;margin:0">The partners</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:48px">
+      <div>
+        <h3 style="font-family:Newsreader,Georgia,serif;font-weight:400;font-size:28px;margin:0 0 8px">Tejas Vijay</h3>
+        <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6B6A66;margin:0 0 16px">Fund manager</p>
+        <p style="font-size:15px;line-height:1.6;color:#3A3936;margin:0">Personal portfolio (TFSA) returned approximately 232% over roughly 21 months to May 2026. Past performance is not indicative of future results.</p>
+      </div>
+      <div>
+        <h3 style="font-family:Newsreader,Georgia,serif;font-weight:400;font-size:28px;margin:0 0 8px">Maximillian Cauldwell</h3>
+        <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#6B6A66;margin:0 0 16px">Fund manager</p>
+        <p style="font-size:15px;line-height:1.6;color:#3A3936;margin:0">Personal portfolio returned 36.56% over roughly five months to May 2026. Past performance is not indicative of future results.</p>
+      </div>
+      <div style="grid-column:1/-1">
+        <a href="Founders.html" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;border-bottom:1px solid #0B0B0B;padding-bottom:3px">About us &rarr;</a>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <section style="border-top:1px solid #DCDAD4;padding:96px 48px 104px">
+    <p style="font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(30px,4vw,58px);line-height:1.1;margin:0;max-width:26ch;text-wrap:pretty">A record of how we invest, nothing more.</p>
+    <p style="font-size:17px;line-height:1.6;color:#3A3936;margin:28px 0 40px;max-width:52ch">MT Technologies is not raising capital, not accepting new contributions, and not offering investment services. This site documents the Fund’s approach and its managers’ own history. Neither manager is a CFA charterholder or a registered investment adviser.</p>
+    <a href="Contact.html" style="display:inline-block;padding:15px 28px;background:#0B0B0B;color:#F7F6F3;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase" style-hover="background:#3A3936">Send a message</a>
+  </section>
+
+  <footer style="border-top:1px solid #DCDAD4;padding:36px 48px;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#6B6A66">
+    <span>MT Technologies · BC General Partnership</span>
+    <span>Not investment advice · Not an offer</span>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showAtAGlance&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Home sections&quot;},&quot;showFoundersTeaser&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Home sections&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showAtAGlance: this.props.showAtAGlance ?? true,
+      showFoundersTeaser: this.props.showFoundersTeaser ?? true
+    };
+  }
+}
+</script>
+</body>
+</html>
