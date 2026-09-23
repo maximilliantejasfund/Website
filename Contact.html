@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="icon" type="image/png" href="images/mt-logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="responsive.css">
 <style>
   html, body { margin: 0; padding: 0; background: #F7F6F3; }
   * { box-sizing: border-box; }
@@ -24,9 +25,11 @@
 </helmet>
 <div style="background:#F7F6F3;color:#0B0B0B;font-family:Archivo,Helvetica,Arial,sans-serif;min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased">
 
-  <header style="display:flex;align-items:center;justify-content:space-between;gap:32px;padding:26px 48px;border-bottom:1px solid #DCDAD4;background:#F7F6F3">
+  <header class="site-header" style="display:flex;align-items:center;justify-content:space-between;gap:32px;padding:26px 48px;border-bottom:1px solid #DCDAD4;background:#F7F6F3">
     <a href="index.html" style="display:flex;align-items:center"><img src="images/mt-logo.png" alt="MT Technologies" style="height:46px;width:auto;display:block"></a>
-    <nav style="display:flex;gap:34px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu"><span></span><span></span><span></span></label>
+    <nav class="site-nav" style="display:flex;gap:34px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase">
       <a href="Philosophy.html">Philosophy</a>
       <a href="Reports.html">Reports</a>
       <a href="Founders.html">Founders</a>
