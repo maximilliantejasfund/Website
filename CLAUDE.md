@@ -11,11 +11,17 @@ every change to `main` as a production deploy.
 
 ## Workflow rules
 
-- **Never commit directly to `main`.** Every change goes on a feature branch
-  (e.g. `git checkout -b fix/contact-form-typo`), gets pushed, and is opened
-  as a pull request for review before merging.
-- **Never force-push, `git reset --hard`, or otherwise rewrite history** on
-  `main` or any shared branch.
-- **Always show the diff and get explicit confirmation before committing or
-  pushing.** Don't assume approval carries over from a previous change.
+- **Commit directly to `main`** — no feature branches or PRs required for
+  routine changes.
+- **Before every push to `main`, tag the current HEAD first**, e.g.
+  `git tag pre-YYYY-MM-DD-N <current main HEAD>` and push the tag
+  (`git push origin <tag>`) *before* pushing the new commit(s). This makes any
+  bad push a one-command rollback: `git reset --hard <tag>` (or
+  `git revert`) instead of digging through history under pressure.
+- **Always show the full diff and get explicit "yes, push" confirmation
+  before pushing to `main`.** Don't assume approval carries over from a
+  previous change.
+- **Never force-push, `git reset --hard`, or otherwise rewrite history on a
+  pushed commit** — only ever move forward (new commits, or a `git revert`)
+  once something is on `origin/main`.
 - Only commit when explicitly asked to.
