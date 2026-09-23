@@ -18,9 +18,11 @@ every change to `main` as a production deploy.
   (`git push origin <tag>`) *before* pushing the new commit(s). This makes any
   bad push a one-command rollback: `git reset --hard <tag>` (or
   `git revert`) instead of digging through history under pressure.
-- **Always show the full diff and get explicit "yes, push" confirmation
-  before pushing to `main`.** Don't assume approval carries over from a
-  previous change.
+- **Make all the requested edits first, then ask once.** Don't stop mid-task
+  to confirm each individual step. Once every change for the request is made,
+  show a single summary/diff and ask one final "push to main?" — that one
+  confirmation covers tagging, committing, and pushing together.
+- Don't assume approval carries over from a previous, separate change/request.
 - **Never force-push, `git reset --hard`, or otherwise rewrite history on a
   pushed commit** — only ever move forward (new commits, or a `git revert`)
   once something is on `origin/main`.
